@@ -83,12 +83,12 @@ img {
     align-items: center;
     height: 60px;
     padding: 1rem 2rem;
-    
     position: fixed;
     width: 100%;
 
-    background-color: #00000030;
-    backdrop-filter: blur(1px);
+    background-color: #008f70b8;
+    
+    
 }
 
 .logo {
@@ -98,37 +98,47 @@ img {
 
 .menu {
     position: fixed;
-    
-
+    background-color: #00eeba00;
     left: 0;
     width: 100%;
     top: 60px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 1rem 0;
-    gap: 1rem;
+    align-items: stretch;
+    
+    /* gap: 1rem; */
     z-index: 1000;
-
+    
     transform: translateY(-200%);
     transition: transform 0.3s;
 }
 
 .menu a {
+    
+    display: flex;
+    justify-content: center;
     color: white;
-    font-size: 1.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
+
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 1rem 2rem;
     transition: color 0.5s, background-color 0.5s;
 }
 
 .menu a:hover {
-    color: var(--gris-oscuro);
-    background-color: var(--turquesa);
+    color: #00614c;
+    background-color:rgba(245, 245, 245, 0.9);
+    
 }
 
 .menu__show {
     transform: translateY(0);
+    background-color: #008f70b8;
+    backdrop-filter: blur(1px);
+    z-index: 5000;
+    padding-bottom: 1rem;
+    
+
 }
 
 .icon__menu {
@@ -228,6 +238,7 @@ img {
     padding-left: 0.5rem;
 }
 .about_pic img{
+    border: 1px solid var(--turquesa);
     padding: 3rem;  
     border-radius: 50%;   
     transition: 0.4s ease;
@@ -236,6 +247,8 @@ img {
     box-shadow: 0 0 5px var(--turquesa),
         0 0 25px var(--turquesa),
         0 0 50px var(--turquesa);
+    border: 2px solid #a1ffeb;
+
 }
 
 
@@ -304,7 +317,7 @@ img {
     justify-content: center;
     align-items: center;
 
-    border: 5px solid #00eeb9;
+    border: 3px solid #00eeb9;
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0px 18px 24px 5px rgba(0,0,0,0.3);
@@ -314,6 +327,8 @@ img {
 .services-card:hover {
     box-shadow: 0 0 5px var(--turquesa),
         0 0 50px var(--turquesa);
+        border: 4px solid #a1ffeb;
+    
 }
 
 .services-card img {
@@ -356,14 +371,16 @@ img {
 }
 .tec-display img{
     padding: 1rem;
-    border-radius: 25px;
+
+    border-radius: 25%;
     transition: 0.3s ease;
 }
 .tec-display img:hover{
-    /* border: 3px solid var(--turquesa); */
+  
+
     transform: translateY(-2rem);
-    box-shadow: 0 0 5px var(--turquesa),
-        0 0 25px var(--turquesa);
+    box-shadow: 0px 40px 20px -15px rgba(0,0,0,0.15);
+
     
 }
 
@@ -394,10 +411,10 @@ img {
     transition: 0.3s ease;
 }
 .portfolio-box img:hover {
-    border: 3px solid var(--turquesa);
-    transform: translateY(-2rem);
-    box-shadow: 0 0 5px var(--turquesa),
-        0 0 25px var(--turquesa);
+        box-shadow: 0 0 5px var(--turquesa),
+        0 0 50px var(--turquesa);
+        border: 3px solid #a1ffeb;
+        z-index: 600;
 }
 
 /* ------CONTACT-------------- */
@@ -533,6 +550,9 @@ input:valid~label {
     }
     .navbar{
         height: 7rem;
+        z-index: 1000;
+        backdrop-filter: blur(2px);
+
 
     }
     .menu {
@@ -649,6 +669,9 @@ input:valid~label {
     }
     .portfolio-display{
         padding: 8rem 12rem;
+    }
+    .portfolio-box img:hover {
+        transform: translateY(-2rem);
     }
     .contact-display{
         display: grid;
