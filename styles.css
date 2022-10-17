@@ -63,13 +63,11 @@ img {
     text-transform: uppercase;
     transition: 0.5s;
     transition-property: box-shadow;
-}
-
-.shadow__btn {
     background: var(--turquesa);
     box-shadow: 0 0 25px var(--turquesa);
-
+    cursor: pointer;
 }
+
 
 .shadow__btn:hover {
     box-shadow: 0 0 5px var(--turquesa),
@@ -134,7 +132,7 @@ img {
 .menu__show {
     transform: translateY(0);
     background-color: #008f70b8;
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(2px);
     z-index: 5000;
     padding-bottom: 1rem;
     
@@ -182,10 +180,10 @@ img {
     color: var(--turquesa);
 }
 .header_info-title {
-    font-size: 5rem;
-    line-height: 5rem;
+    font-size: 4rem;
+    line-height: 4rem;
     color: var(--turquesa);
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .header_info-text p {
@@ -272,7 +270,7 @@ img {
     justify-content: center;
     padding-top: 3rem;
     gap: 4rem;
-    padding: 6rem;
+    padding: 3rem;
 }
 
 .services_title span {
@@ -307,7 +305,7 @@ img {
     
 }
 .services-card img{
-    width: 100%;
+    max-width: 200px;
     object-fit: cover;
 }
 
@@ -316,7 +314,8 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    max-width: 350px;
+    margin: auto;
     border: 3px solid #00eeb9;
     border-radius: 10px;
     padding: 2rem;
@@ -327,7 +326,7 @@ img {
 .services-card:hover {
     box-shadow: 0 0 5px var(--turquesa),
         0 0 50px var(--turquesa);
-        border: 4px solid #a1ffeb;
+        border: solid #a1ffeb;
     
 }
 
@@ -346,7 +345,7 @@ img {
 .services-card_text {
     color: whitesmoke;
     font-size: 1.3rem;
-    padding: 1rem 0.5rem;
+    padding: 1rem 1rem;
 }
 
 .services-card_title span {
@@ -363,11 +362,15 @@ img {
     background-color: #07ac7d;
     display: grid;
     justify-items: center;
-    gap: 5rem;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 2rem 5rem;
+    gap: 3rem 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    padding: 2rem 2rem;
     box-shadow: inset 0px 0px 27px 24px rgba(0,0,0,0.18);
     
+    
+}
+.tec-display img{
+    width: 70%;
 }
 .tec-display img{
     padding: 1rem;
@@ -399,7 +402,7 @@ img {
 
 .portfolio_projects-display {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-content: center;
     gap: 4rem;
 
@@ -409,6 +412,7 @@ img {
     border-radius: 1rem;
     box-shadow: 0px 18px 24px 5px rgba(0,0,0,0.5);
     transition: 0.3s ease;
+    border: 3px solid rgba(0, 0, 0, 0.052);
 }
 .portfolio-box img:hover {
         box-shadow: 0 0 5px var(--turquesa),
@@ -479,7 +483,7 @@ img {
 
 
 .input {
-    min-width: 20rem;
+    max-width: 20rem;
     border: solid 1.5px #9e9e9e;
     border-radius: 1rem;
     background: none;
