@@ -45,11 +45,29 @@ img {
 }
 
 .bg-c {
-    background-color: var(--gris-claro);
+    background-color: var(--gris-claro); 
+    
 }
 
 .bg-o {
     background-color: var(--gris-oscuro);
+}
+
+#particles-js{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    
+    
+}
+#particles-js > canvas {
+    height: calc(100vh + 60px) !important;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
 }
 
 .shadow__btn {
@@ -84,14 +102,14 @@ img {
     padding: 1rem 2rem;
     position: fixed;
     width: 100%;
-
+    z-index: 1000;
     background-color: #008f70b8;
 
 
 }
 
 .logo {
-    width: 10%;
+    width: calc(20px + 5vh);
     font-size: 2rem;
 }
 
@@ -203,10 +221,12 @@ img {
 
 .btn-header {
     align-self: center;
+    z-index: 200;
 }
 
 .header_pic {
     padding-left: 1rem;
+    z-index: 1;
 
 
 }
@@ -417,6 +437,7 @@ img {
     max-width: 1500px;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     padding-top: 3rem;
     gap: 4rem;
     padding: 4rem;
@@ -429,21 +450,90 @@ img {
     gap: 4rem;
 
 }
-
-.portfolio-box img {
-    max-width: 300px;
-    border-radius: 1rem;
-    box-shadow: 0px 18px 24px 5px rgba(0, 0, 0, 0.5);
-    transition: 0.3s ease;
-    border: 3px solid rgba(0, 0, 0, 0.052);
+.portfolio-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
 }
 
-.portfolio-box img:hover {
+.portfolio__card{
+    position: relative;
+    max-width: 300px;
+    border: 3px solid rgba(0, 0, 0, 0.052);
+}
+.portfolio__card img{
+    border: 3px solid rgba(0, 0, 0, 0.052);
+    border-radius: 10px;
+}
+
+.portfolio__card:hover img{
+    border: 3px solid rgba(0, 0, 0, 0.052);
+    border-radius: 10px;
     box-shadow: 0 0 5px var(--turquesa),
         0 0 50px var(--turquesa);
     border: 3px solid #a1ffeb;
-    z-index: 600;
 }
+.portfolio__card-img{
+    display: block; 
+
+}
+
+
+.portfolio__card-info{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 60, 32, 0.591);
+    backdrop-filter: blur(2px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    opacity: 0;
+    transition: 0.5s ease;
+    border-radius: 10px;
+
+    
+}
+.portfolio__card-info > * {
+    transform: translateY(50px);
+    transition: transform 0.5s ease;
+}
+.portfolio__card-info:hover > * {
+    transform: translateY(0);
+}
+.portfolio__card-info:hover {
+    opacity: 1;
+
+}
+
+
+.portfolio__card-info h3{
+    font-size: 2.5rem;
+    transition: 0.2s ease;
+    
+}
+.portfolio__title-link:hover {
+    text-align: center;
+    transform: scale(1.1);
+    letter-spacing: 1px;
+    color: #00eeb9;
+}
+
+.portfolio__card-info p{
+    margin-top: 20px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+
+
+
 
 /* ------CONTACT-------------- */
 
@@ -593,8 +683,11 @@ input:valid~label {
 
 
 @media (min-width: 900px) {
+    #particles-js > canvas {
+        height:100vh !important;
+    }
     .shadow__btn {
-        padding: 2rem 4rem;
+        padding: 1rem 2rem;
         font-size: 2.4rem;
 
     }
@@ -609,7 +702,7 @@ input:valid~label {
     }
 
     .navbar {
-        height: 7rem;
+        height: 6rem;
         z-index: 1000;
         backdrop-filter: blur(2px);
 
@@ -629,7 +722,7 @@ input:valid~label {
     }
 
     .menu a {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: 600;
 
     }
@@ -640,8 +733,7 @@ input:valid~label {
     }
 
     .logo {
-        padding: 4rem;
-        display: inline-block;
+        margin-left: 20px;
     }
 
     .title-aux {
@@ -653,11 +745,15 @@ input:valid~label {
         font-size: 2.5rem;
     }
 
+    
+
     .header-display {
         flex-direction: row;
         padding-top: 3rem;
         padding-left: 3rem;
         gap: 3rem;
+        height: 100vh;
+        padding-top: 10rem;
     }
 
     .header_info {
@@ -669,19 +765,23 @@ input:valid~label {
     }
 
     .header_info-title {
-        font-size: 7rem;
-        line-height: 6.6rem;
+        font-size: 5rem;
+        line-height: 4rem;
     }
 
     .header_info-text p {
         font-size: 2rem;
 
     }
+    .header_pic{
+        width: 40%;
+    }
 
     .about-display {
         flex-direction: row-reverse;
         padding: 10rem;
-        gap: 8rem
+        gap: 8rem;
+
     }
 
     .about_info {
@@ -692,7 +792,10 @@ input:valid~label {
         padding: 4rem;
         max-width: 600px;
     }
-
+    .about-btn{
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
 
     .title-aux span {
         color: #00eeb9;
