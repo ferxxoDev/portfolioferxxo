@@ -529,8 +529,10 @@ img {
 
 .portfolio__card-info p{
     margin-top: 20px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     letter-spacing: 1px;
+    text-align: center;
+
 }
 
 
