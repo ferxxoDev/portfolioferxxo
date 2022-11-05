@@ -61,12 +61,13 @@ img {
     
 }
 #particles-js > canvas {
-    height: calc(100vh + 60px) !important;
+    height: calc(100vh - 76px) !important;
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
     top: 0;
+
 
 }
 
@@ -109,7 +110,7 @@ img {
 }
 
 .logo {
-    width: calc(20px + 5vh);
+    width: calc(10px + 5vh);
     font-size: 2rem;
 }
 
@@ -164,6 +165,7 @@ img {
     font-size: 2rem;
     color: whitesmoke;
     transition: 0.3s ease;
+    margin-right: 5px;
 }
 
 .icon__menu:hover {
@@ -180,7 +182,7 @@ img {
     align-items: center;
     text-align: center;
     padding-top: 8rem;
-    gap: 8rem;
+    gap: 4rem;
 }
 
 .header_info {
@@ -189,7 +191,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 7rem;
+    gap: 4rem;
 
 
 }
@@ -699,6 +701,8 @@ input:valid~label {
 
     .icon__menu {
         display: none;
+        
+
     }
 
     .navbar {
@@ -733,8 +737,10 @@ input:valid~label {
     }
 
     .logo {
-        margin-left: 20px;
+        margin: 20px;
+        
     }
+
 
     .title-aux {
         font-size: 5rem;
@@ -794,7 +800,7 @@ input:valid~label {
     }
     .about-btn{
         font-size: 2rem;
-        letter-spacing: 1px;
+        
     }
 
     .title-aux span {
