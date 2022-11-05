@@ -254,28 +254,20 @@
 
 
             <div class="container-form">
-                <form class="display-form" action="">
+                <form id="contact" class="display-form">
                     <h2 class="title-aux">Drop a <span>Line</span></h2>
                     <div class="input-group f-name">
-                        <input required="" type="text" name="text" autocomplete="off" class="input">
-                        <label class="user-label"><span>First Name</span></label>
+                        <input required="" type="name" name="name" id="name" autocomplete="on" class="input">
+                        <label for="name" class="user-label"><span>Name</span></label>
                     </div>
                     <div class="input-group f-email">
-                        <input required="" type="email" name="text" autocomplete="off" class="input">
-                        <label class="user-label">Email</label>
-                    </div>
-                    <div class="input-group f-phone">
-                        <input required="" type="tel" name="text" autocomplete="off" class="input">
-                        <label class="user-label">Phone</label>
-                    </div>
-                    <div class="input-group f-country">
-                        <input required="" type="text" name="text" autocomplete="off" class="input">
-                        <label class="user-label">Country</label>
+                        <input id="email" required="" type="email" name="email" autocomplete="off" class="input">
+                        <label for="email" class="user-label">Email</label>
                     </div>
                     <div class="input-group f-tellme">
-                        <input required="" type="text" name="text" autocomplete="off" cols="100%" rows="55"
+                        <input id="message" required="" type="text" name="message" autocomplete="off" cols="100%" rows="55"
                             class="input">
-                        <label class="user-label">Tell Me</label>
+                        <label for="message" class="user-label">Tell Me</label>
                     </div>
                     <button class="shadow__btn">
                         Send Me
